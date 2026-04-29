@@ -5,9 +5,10 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Navbar() {
   return (
-    <nav className="flex flex-row items-center justify-between p-6 bg-[#020617] shadow-md px-[8rem]">
-        <h2 className="font-space text-2xl font-bold text-white">KAUÃ FELIX</h2>
-
+    <nav className="flex flex-row items-center justify-between p-6 bg-[#020617] shadow-md max-w-full px-[5rem]">
+        <div className="w-[200px]">
+            <h2 className="hover-underline font-space font-bold">KAUÃ FELIX</h2>
+        </div>
         <div className="flex gap-10 justify-center items-center">
             <Link  href="/" 
             className="relative text-gray-300 hover:text-[#3B82F6] font-medium transition-all
@@ -29,7 +30,7 @@ export default function Navbar() {
             </Link>
         </div>
 
-        <div className="flex gap-10 justify-center items-center">
+        <div className="flex gap-10 justify-center items-center w-[200px]">
             <Link href="https://github.com/kauaafeelix" target="_blank">
             <FaGithub className="w-6 h-6 text-gray-300 hover:text-[#3B82F6] transition-colors cursor-pointer" />
             </Link>
