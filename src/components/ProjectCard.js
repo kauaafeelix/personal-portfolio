@@ -16,7 +16,7 @@ export default function ProjectCard({ title, description, category, techs, githu
         <p className="text-sm text-[#CBD5E1] leading-relaxed">{description}</p>
       </div>
 
-      <div className="flex flex-col gap-2 pt-2 border-t border-[#1E3A5F]">
+      <div className="flex flex-col gap-4 pt-6 border-t border-[#1E3A5F]">
         <p className="text-xs text-[#4D8EFF] tracking-widest uppercase">Tecnologias</p>
         <div className="flex flex-wrap gap-2 items-center justify-center">
           {techs.map(tech => (
