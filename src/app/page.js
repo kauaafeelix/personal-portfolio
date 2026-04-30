@@ -27,7 +27,7 @@ export default function Home() {
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.8, ease: "easeOut" } 
+      transition: { duration: 1.0, ease: "easeOut" } 
     }
   };
 
@@ -59,7 +59,7 @@ export default function Home() {
       <motion.section 
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: false, amount: 0.1 }}
         variants={fadeIn}
         className="flex flex-col gap-10 mt-[20rem] mx-[4rem]"
       >
@@ -74,7 +74,7 @@ export default function Home() {
               key={project.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.1 }}
               transition={{ delay: index * 0.2 }}
             >
               <ProjectCard {...project} />
