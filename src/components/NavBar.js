@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Navbar() {
   return (
-    <nav className="flex flex-row items-center justify-between p-6 bg-[#020617] shadow-md max-w-full px-[5rem]">
+    <nav className="sticky top-0 z-50 flex flex-row items-center justify-between p-6 bg-[#020617]/80 shadow-md max-w-full px-[5rem] backdrop-blur-md">
         <div className="w-[200px]">
             <h2 className="hover-underline font-space font-bold">KAUÃ FELIX</h2>
         </div>

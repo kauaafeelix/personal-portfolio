@@ -1,6 +1,22 @@
-import Image from "next/image";
+import ProjectCard from "@/components/ProjectCard";
 import "./globals.css";
 
+const projects = [
+  {
+    title: "TaskFlow API",
+    description: "Sistema de gestão de tarefas e projetos desenvolvido com Spring Boot seguindo a Arquitetura Hexagonal (Ports & Adapters). O projeto aplica conceitos como Spring Security com autenticação JWT e separação entre domínio e infraestrutura.",
+    category: "Backend",
+    techs: ["Java", "Spring Boot", "Spring Security", "JWT", "PostgreSQL", "Docker", "Hexagonal"],
+    githubUrl: "https://github.com/kauaafeelix/TaskFlow.git"
+  },
+  {
+    title: "SynapseRH",
+    description: "O SynapseRH é um sistema de recrutamento e seleção desenvolvido em Java que visa otimizar o processo de contratação, conectando candidatos qualificados com vagas adequadas ao seu perfil. ",
+    category: "Backend",
+    techs: ["Java", "Strategy Pattern","PostgreSQL", "JDBC", "jBCrypt 0.4", "MapStruct 1.5.5", "Docker", "Maven"],
+    githubUrl: "https://github.com/kauaafeelix/Recruitment-System.git"
+  }
+];
 
 export default function Home() {
     return (
@@ -21,34 +37,13 @@ export default function Home() {
           </section>
           <section className="flex flex-col gap-10 mt-[20rem] mx-[4rem]">
               <div className="flex flex-col text-justify">
-                  <h2 className="font-space text-3xl font-bold text-white">Projetos em Destaque</h2>
-                  <p className="text-[#CBD5E1] mt-2">Uma seleção do meu trabalho mais recente.</p>
+                  <h2 className="font-space text-5xl font-bold text-white">Projetos em Destaque</h2>
+                  <p className="text-[#CBD5E1] mt-2 mb-6">Uma seleção do meu trabalho mais recente.</p>
               </div>
               <div className="grid grid-cols-2 gap-6">
-
-                <div className="flex flex-col gap-4 p-6 bg-[#0A1628] border border-[#1E3A5F] rounded-xl">
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-semibold px-3 py-1 bg-[#001A42] text-[#4D8EFF] border border-[#004395] rounded-md">Backend</span>
-                    <a href="#" className="text-xs text-[#CBD5E1] hover:text-[#4D8EFF] transition-colors">GitHub ↗</a>
-                  </div>
-
-                  <div className="flex flex-col gap-2">
-                    <h3 className="font-space text-xl font-bold text-white">TaskFlow API</h3>
-                    <p className="text-sm text-[#CBD5E1] leading-relaxed">Sistema de gestão de tarefas e projetos desenvolvido com Spring Boot seguindo a Arquitetura Hexagonal (Ports & Adapters).
-                       O projeto aplica conceitos como Spring Security com autenticação JWT e separação entre domínio e infraestrutura.</p>
-                  </div>
-
-                  <div className="flex flex-col gap-2 pt-2 border-t border-[#1E3A5F]">
-                    <p className="text-xs text-[#4D8EFF] tracking-widest uppercase">Tecnologias</p>
-                    <div className="flex flex-wrap gap-2 items-center justify-center">
-                      {["Java", "Spring Boot", "Spring Security", "JWT", "PostgreSQL", "Docker", "Hexagonal"].map(tech => (
-                        <span key={tech} className="text-xs px-2 py-1 bg-[#001A42] text-[#CBD5E1] border border-[#1E3A5F] rounded-md">{tech}</span>
-                      ))}
-                    </div>
-                  </div>
-
-                </div>
+                {projects.map((project) => (
+                  <ProjectCard key={project.title} {...project} />
+                ))}
               </div>
           </section>
       </main>
