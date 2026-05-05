@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
 import "./globals.css";
 import Image from "next/image";
-import carbon from "@/assets/carbon.png"
+import developer from "@/assets/developer.png"
 import { SiNextdotjs, SiSpringboot, SiArchlinux } from "react-icons/si"
 
 const projects = [
@@ -21,6 +21,20 @@ const projects = [
     category: "Backend",
     techs: ["Java", "Strategy Pattern", "PostgreSQL", "Clean Architecture", "Docker"],
     githubUrl: "https://github.com/kauaafeelix/Recruitment-System.git"
+  },
+  {
+    title: "Login-App",
+    description: "O Login-App é uma aplicação web de login utilizando tecnologias de Front e Backend",
+    category: "FullStack",
+    techs: ["Java", "Spring", "Spring Security" ,"H2database", "Clean Architecture"],
+    githubUrl: "https://github.com/kauaafeelix/login-app-fullstack.git"
+  },
+    {
+    title: "Event & Conference",
+    description: "O projeto consiste em uma landing page responsiva, desenvolvida a partir de um layout fornecido no Figma.",
+    category: "Frontend",
+    techs: ["HTML", "CSS", "Figma"],
+    githubUrl: "https://github.com/kauaafeelix/Event-Conference.git"
   }
 ];
 
@@ -86,7 +100,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        <section className="flex flex-row my-[4rem] p-10 mx-[4rem] bg-[#0A1628] rounded-md justify-between">
+        <section className="flex flex-row mt-[6rem] mb-[2rem] p-10 mx-[4rem] bg-[#0A1628] rounded-md justify-between">
           <div className="flex flex-col p-5 gap-[4rem] justify-center max-w-[40%]">
               <h2 className="font-space font-semibold text-5xl text-left">CONSTRUINDO SISTEMAS QUE <span className="text-[#4D8EFF] italic">ESCALAM.</span></h2>
                   
@@ -127,7 +141,7 @@ export default function Home() {
 
         <div className="flex flex-col items-center justify-center p-10 mr-[8rem] w-[600px] relative group overflow-hidden rounded-xl">
           <Image 
-            src={carbon} 
+            src={developer} 
             alt="Foto de código representando uma classe dev"
             className="rounded-lg border-l-6 border-t-6 border-[#004395] w-[500px] object-cover transition-transform duration-500 group-hover:scale-120"
           />
